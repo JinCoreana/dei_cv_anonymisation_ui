@@ -45,7 +45,7 @@ const CvAnonymisationPage = () => {
           "https://dei-cv-flask.onrender.com/anonymise",
           {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "multipart/form-data" },
             body: formData,
           }
         );
