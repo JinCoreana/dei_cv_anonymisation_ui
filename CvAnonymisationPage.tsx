@@ -41,14 +41,10 @@ const CvAnonymisationPage = () => {
       formData.append("file", submitData, selectedFile);
       try {
         //Used direct url for now. To be refactored with proxy server
-        const response = await fetch(
-          "https://dei-cv-flask.onrender.com/anonymise",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/pdf" },
-            body: formData,
-          }
-        );
+        const response = await fetch("/anonymise", {
+          method: "POST",
+          body: formData,
+        });
         if (response.ok) {
           const parsedResponse = await response.text();
           setAnonymisedData(parsedResponse);
