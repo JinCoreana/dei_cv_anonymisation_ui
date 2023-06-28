@@ -43,7 +43,10 @@ const CvAnonymisationPage = () => {
       formData.append("file", submitData, selectedFile);
       try {
         //Used direct url for now. To be refactored with proxy server
-        const response = await axios.post("/", "");
+        const response = await axios.post(
+          "https://dei-cv-flask.onrender.com",
+          formData
+        );
         if (response) {
           const parsedResponse = await response.data;
           setAnonymisedData(parsedResponse);
