@@ -1,18 +1,16 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Dependency directories
+node_modules/
+.vs
+build/
+.DS_Store
 
-# Other files and folders
-.settings/
+# vscode
+.vscode
+.vs
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Server
+venv
+**/__pycache__/
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Security
+.env
