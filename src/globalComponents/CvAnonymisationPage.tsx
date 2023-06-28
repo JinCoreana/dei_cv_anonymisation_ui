@@ -43,7 +43,7 @@ const CvAnonymisationPage = () => {
       formData.append("file", submitData, selectedFile);
       try {
         //Used direct url for now. To be refactored with proxy server
-        const response = await axios.post("/", formData);
+        const response = await axios.post("/", "");
         if (response) {
           const parsedResponse = await response.data;
           setAnonymisedData(parsedResponse);
