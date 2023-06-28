@@ -13,6 +13,7 @@ import Input from "carbon-react/lib/__internal__/input";
 import Button from "carbon-react/lib/components/button/button.component";
 import Textbox from "carbon-react/lib/components/textbox/textbox.component";
 import Typography from "carbon-react/lib/components/typography/typography.component";
+import React from "react";
 
 const CvAnonymisationPage = () => {
   const [submitData, setSubmitData] = useState();
@@ -41,7 +42,7 @@ const CvAnonymisationPage = () => {
       formData.append("file", submitData, selectedFile);
       try {
         //Used direct url for now. To be refactored with proxy server
-        const response = await fetch("/anonymise", {
+        const response = await fetch("/", {
           method: "POST",
           body: formData,
         });
